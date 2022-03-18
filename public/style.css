@@ -1,0 +1,22 @@
+body {
+    background-color: yellow;
+}
+
+input {
+    background-color: rgba(235, 235, 158, 0.534);
+    border: 1px solid rgb(243, 97, 0);
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textbox {
+    width: 250px;
+    height: 100px;
+}
+
+

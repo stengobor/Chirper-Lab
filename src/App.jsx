@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Username from "./components/Username";
 import Text from "./components/Text";
+import Entries from "./components/Entries";
 
 const App = () => {
   const [username, setUsername] = useState("");
   const [text, setText] = useState("");
   //   const [time, setTime] = useState("");
   const [typed, setTyped] = useState(false);
-const [entry, setEntries] = useState("");
+  const [entry, setEntries] = useState();
   //   timeStamp(() => {
   //     time = Date.now();
   //     setTime (new Intl.DateTimeFormat("en-US", {
@@ -23,19 +24,14 @@ const [entry, setEntries] = useState("");
     e.preventDefault();
     setTyped(true);
   };
+
   const handleEntries = (e) => {
-      e.preventDefault();
-      setEntries(entry + 1);
+    e.preventDefault();
+    <Entries></Entries>
   }
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setTyped(true);
-  //     }, 2000);
-  //   });
 
   if (typed) {
-
     return (
       <>
         <h1
@@ -112,14 +108,14 @@ const [entry, setEntries] = useState("");
             <div class="card-body">
               <h5 class="card-title">TYPE SOMETHING...</h5>
               <input
-                id='textbox'
+                id="textbox"
                 placeholder="Your Thoughts..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               ></input>
             </div>
             <div>
-              <button onClick={handleClick} class="btn btn-danger">
+              <button type='submit' onClick={handleClick} class="btn btn-danger">
                 Chirp It!
               </button>
             </div>

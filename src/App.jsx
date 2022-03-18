@@ -112,7 +112,7 @@ const [entry, setEntries] = useState("");
             <div class="card-body">
               <h5 class="card-title">TYPE SOMETHING...</h5>
               <input
-                type='text'
+                id='textbox'
                 placeholder="Your Thoughts..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}

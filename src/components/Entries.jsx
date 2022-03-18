@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
+
 
 const Entries = (props) => {
-  useEffect(() => {
-    window.addEventListener("click", (event) => {});
-  }, []);
 
   return (
     <div class="card text-light bg-warning col-4 m-5">
       <div class="card-header">
-        <header> @{props.newUser}</header>
+        <header> @Sofi </header>
       </div>
       <div class="card-body">
-        <header> {props.newText} </header>
+        <header> {props.message} </header>
       </div>
     </div>
   );

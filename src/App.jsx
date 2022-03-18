@@ -8,7 +8,24 @@ const App = () => {
   const [text, setText] = useState("");
   //   const [time, setTime] = useState("");
   const [typed, setTyped] = useState(false);
-  const [entry, setEntries] = useState();
+  const [entry, setEntries] = useState([
+    {
+      id: 1,
+      name: "Sofi",
+      message: "Hello",
+    },
+    {
+      id: 2,
+      name: "Rich",
+      message: "Hello There",
+    },
+    {
+      id: 3,
+      name: "MoMo",
+      message: "Hi",
+    },
+  ]);
+
   //   timeStamp(() => {
   //     time = Date.now();
   //     setTime (new Intl.DateTimeFormat("en-US", {
@@ -27,9 +44,8 @@ const App = () => {
 
   const handleEntries = (e) => {
     e.preventDefault();
-    <Entries></Entries>
-  }
-
+    setEntries();
+  };
 
   if (typed) {
     return (
@@ -79,12 +95,20 @@ const App = () => {
               <Text currentText={text}></Text>
             </div>
           </div>
+          {entry.map((entry) => (
+          <Entries
+            key={entry.id}
+            name={entry.name}
+            message={entry.message}
+          ></Entries>
+        ))}
         </div>
       </>
     );
   } else {
     return (
       <>
+        
         <h1
           style={{
             letterSpacing: "70px",
@@ -115,11 +139,23 @@ const App = () => {
               ></input>
             </div>
             <div>
-              <button type='submit' onClick={handleClick} class="btn btn-danger">
+              <button
+                type="submit"
+                onClick={handleClick}
+                class="btn btn-danger"
+              >
                 Chirp It!
               </button>
             </div>
           </div>
+
+          {entry.map((entry) => (
+          <Entries
+            key={entry.id}
+            username={entry.name}
+            message={entry.message}
+          ></Entries>
+        ))}
         </div>
       </>
     );

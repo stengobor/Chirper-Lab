@@ -11,17 +11,17 @@ const App = () => {
   const [entry, setEntries] = useState([
     {
       id: 1,
-      name: "Sofi",
+      username: ("Sofi"),
       message: "Hello",
     },
     {
       id: 2,
-      name: "Rich",
+      username: ("Rich"),
       message: "Hello There",
     },
     {
       id: 3,
-      name: "MoMo",
+      username: ("MoMo"),
       message: "Hi",
     },
   ]);
@@ -98,7 +98,7 @@ const App = () => {
           {entry.map((entry) => (
           <Entries
             key={entry.id}
-            name={entry.name}
+            username={entry.username}
             message={entry.message}
           ></Entries>
         ))}
@@ -152,7 +152,7 @@ const App = () => {
           {entry.map((entry) => (
           <Entries
             key={entry.id}
-            username={entry.name}
+            username={entry.username}
             message={entry.message}
           ></Entries>
         ))}

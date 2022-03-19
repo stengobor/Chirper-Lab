@@ -1,15 +1,15 @@
 import React from "react";
 
 
-const Entries = (props) => {
+const Entries = ({username, message}) => {
 
   return (
     <div class="card text-light bg-warning col-4 m-5">
       <div class="card-header">
-        <header> @Sofi </header>
+        <header> @{username} </header>
       </div>
       <div class="card-body">
-        <header> {props.message} </header>
+        <header> {message} </header>
       </div>
     </div>
   );
